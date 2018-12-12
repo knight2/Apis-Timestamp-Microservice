@@ -26,7 +26,7 @@ app.get("/api/hello", function (req, res) {
 
 app.get("/api/timestamp/:date?", function(req, res){
   
-  var date = null;
+  var submitted_date = null;
   //parsing date string
   if (req.params.date !== undefined){
 
@@ -43,7 +43,7 @@ app.get("/api/timestamp/:date?", function(req, res){
     submitted_date = new Date(Date.now());
   }
 
-  if (date == "Invalid Date"){
+  if (submitted_date == "Invalid Date"){
     res.json("invalid date");
   } else{
     res.json({"unix": submitted_date.getTime(), "utc": submitted_date.toUTCString()});
