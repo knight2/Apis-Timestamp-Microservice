@@ -1,5 +1,5 @@
 
-# API Project: Timestamp Microservice for FCC
+# API: Timestamp Microservice 
 
 ### User stories :
 
